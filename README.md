@@ -13,6 +13,10 @@ Raspberry Pi powered by electric bike battery.  V 0.01
 * Cycle Analyst (optional)
   * Cycle Analyst USB Serial TTY programing cable
 * Custom Display EG smart phone, Tablet, Kindle (optional)
+* Camera (optional)
+  * Pi Camera Standard of No-IR for night vision
+  * USB Web Cam
+
 
 
 ##Description
