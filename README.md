@@ -21,7 +21,7 @@ E-Picycle a Raspberry Pi GPS Tracking / GPS Guidance (offline maps) and E-Bicycl
 ###Idea
 Wireless USB Dongle configured to constantly be searching for open Wi-Fi networks. Once connected to the internet, notify the owner / operator of the E-Bike the GPS coordinates, Battery Statistics and Cycle Analyst data. 
 
-The notification method will be highly configurable with options such as Web bashed dashboard (local and/or remote), Android application. An android phone may be used as a custom display and communicate with the raspberry Pi by WiFi or Bluetooth.
+The notification method will be highly configurable with options such as Web bashed dashboard (local and/or remote), Android application. An smart device may be used as a custom display and communicate with the raspberry Pi by WiFi or Bluetooth.
 
 ###Cycle Analyst
 Record Cycle Analyst data ( volts, amps, speed etc. at regular intervals) Save until exported to Web based dashboard.
