@@ -12,7 +12,7 @@ Raspberry Pi powered by electric bike battery.
   * Bluetooth Dongle (optional)
 * Cycle Analyst (optional)
   * Cycle Analyst USB Serial TTY programing cable
-* Custom Display EG smart phone, Tablet, Kindle
+* Custom Display EG smart phone, Tablet, Kindle (optional)
 
 
 ##Description
