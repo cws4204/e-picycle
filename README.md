@@ -1,6 +1,6 @@
 # e-picycle
 
-Raspberry Pi powered by electric bike battery.  
+Raspberry Pi powered by electric bike battery.  V 0.01
 
 ##Parts Required:
 
