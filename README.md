@@ -12,10 +12,11 @@ Raspberry Pi powered by electric bike battery.
   * Bluetooth Dongle (optional)
 * Cycle Analyst (optional)
   * Cycle Analyst USB Serial TTY programing cable
+* Custom Display EG smart phone, Tablet, Kindle
 
 
 ##Description
-E-Picycle a Raspberry Pi GPS Tracking and E-Bicycle statistics gathering solution.
+E-Picycle a Raspberry Pi GPS Tracking / GPS Guidance (offline maps) and E-Bicycle statistics gathering solution.
 
 ###Idea
 Wireless USB Dongle configured to constantly be searching for open Wi-Fi networks. Once connected to the internet, notify the owner / operator of the E-Bike the GPS coordinates, Battery Statistics and Cycle Analyst data.
@@ -26,7 +27,7 @@ Record Cycle Analyst data ( volts, amps, speed etc. at regular intervals) Save u
 ###Web Based Dashboard
 * Local Pi Web Server
 * Export to remote web server
-* 
+ 
 ###Export raw data
 Idea: Option to have raspberry pi export data to FTP Server, Email, Twitter, Web Based Dashboard local and or remote
 * Dashboard enabled
