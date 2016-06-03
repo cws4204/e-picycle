@@ -23,6 +23,9 @@ Wireless USB Dongle configured to constantly be searching for open Wi-Fi network
 
 The notification method will be highly configurable with options such as Web bashed dashboard (local and/or remote), Android application. An smart device may be used as a custom display and communicate with the raspberry Pi by WiFi or Bluetooth.
 
+##Discussion
+https://www.reddit.com/r/epicycle/
+
 ###Cycle Analyst
 Record Cycle Analyst data ( volts, amps, speed etc. at regular intervals) Save until exported to Web based dashboard.
 
