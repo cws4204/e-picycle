@@ -6,11 +6,11 @@ Raspberry Pi powered by electric bike battery.
 
 *DC-DC Converter eg 36v to 12v or 48v to 12v (depending on battery voltage)
 Raspberry Pi
-*Wi-Fi dongle (optional)
-*GPS component (optional)
-*Cycle Analyst (optional)
-*Cycle Analyst USB Serial TTY programing cable
-*Temperatue / Humidity probe (optional)
+* Wi-Fi dongle (optional)
+* GPS component (optional)
+* Cycle Analyst (optional)
+* Cycle Analyst USB Serial TTY programing cable
+* Temperatue / Humidity probe (optional)
 
 ##Description
 E-Picycle a Raspberry Pi GPS Tracking and E-Bicycle statistics gathering solution.
