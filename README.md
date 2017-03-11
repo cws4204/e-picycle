@@ -33,9 +33,9 @@ Visit https://portal.influxdata.com/downloads and download the latest ARM binary
 
 `sudo adduser influxdb`
 
-`sudo tar xzf influxdb-1.1.1-1linux_armhf.tar.gz `
+`sudo tar xzf influxdb-1.2.1-1linux_armhf.tar.gz `
 
-`cd influxdb-influxdb-1.1.1-1`
+`cd influxdb-influxdb-1.2.1-1`
 
 `sudo cp -R * /`
 
