@@ -28,6 +28,7 @@ Grafana exported example of a working install - https://snapshot.raintank.io/das
 
 ##InfluxDB
 Visit https://portal.influxdata.com/downloads and download the latest ARM binary | Standalone Linux Binaries (ARM). At the time of writing - InfluxDB v1.2.1.
+
 `wget https://dl.influxdata.com/influxdb/releases/influxdb-1.2.1_linux_armhf.tar.gz`
 
 `tar xvfz influxdb-1.2.1_linux_armhf.tar.gz`
@@ -99,6 +100,9 @@ Install Grafana and create a Datasource to InfluxDB, database named ebike (Newer
 
 ### Open web browser to http:// ip of pi:3000
 
-Create a datasource
+
+![Create a datasource](https://github.com/cws4204/e-picycle/blob/master/Grafana_influxDB_datasource%20example.png)
 
 Import Dashboard or create your own
+
+
