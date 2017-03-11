@@ -75,5 +75,25 @@ InfluxDB shell 0.12.0
 `CREATE DATABASE ebike`
 
 * Grafana
-Install Grafana and create a Datasource to InfluxDB, database named ebike
+Install Grafana and create a Datasource to InfluxDB, database named ebike (Newer built can be found here https://github.com/fg2it/grafana-on-raspberry)
 
+
+
+`sudo apt-get install adduser libfontconfig`
+
+`wget https://github.com/fg2it/grafana-on-raspberry/releases/download/v3.1.1-wheezy-jessie/grafana_3.1.1-1472506485_armhf.deb`
+
+`sudo dpkg -i grafana_3.1.1-1472506485_armhf.deb`
+
+`sudo /bin/systemctl daemon-reload`
+
+## Start Grafana on boot
+`sudo /bin/systemctl enable grafana-server`
+
+`sudo /bin/systemctl start grafana-server`
+
+### Open web browser to http:// ip of pi:3000
+
+Create a datasource
+
+Import Dashboard or create your own
