@@ -74,6 +74,10 @@ InfluxDB shell 0.12.0
 
 `CREATE DATABASE ebike`
 
+##Create user
+
+influx -username ebike -password ebike
+
 * Grafana
 Install Grafana and create a Datasource to InfluxDB, database named ebike (Newer built can be found here https://github.com/fg2it/grafana-on-raspberry)
 
