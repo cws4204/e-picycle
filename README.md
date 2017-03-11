@@ -5,18 +5,17 @@ Raspberry Pi powered by electric bike battery.  V 0.01
 ##Parts Required:
 
 * DC-DC Converter eg 36v to 12v or 48v to 12v (depending on battery voltage)
-* Raspberry Pi
-  * GPS component (optional)
-  * Wi-Fi dongle (optional)
-  * Temperatue / Humidity probe (optional)
-  * Bluetooth Dongle (optional)
-* Cycle Analyst (optional)
-  * Cycle Analyst USB Serial TTY programing cable
-* Custom Display EG smart phone, Tablet, Kindle (optional)
-* Camera (optional)
+* Raspberry Pi 3 (Raspberry Pi 2 will work however there is no onboard Bluetooth/Wifi)
+* Cycle Analyst
+* Cycle Analyst USB Serial TTY programing cable
+
+* Future features
   * Pi Camera Standard of No-IR for night vision
   * USB Web Cam
-
+  * GPS component (optional) future
+  * Temperatue / Humidity probe (optional)   * GPS component (optional) future
+  * SR 04 Ultra sonic range sensor (optional) future
+  * Custom Display EG smart phone, Tablet, Kindle (optional)
 
 
 ##Description
