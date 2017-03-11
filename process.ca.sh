@@ -2,7 +2,7 @@
 #Version 0.0.1 - March 11 2017 - EBBB - Ebike Black Box
 #Script to process Cycle Analyst data and ship it to influxDB
 #The file received.txt is generated via script > python_serial.py
-##This script processes the first line of the file, Formats it with Sed & Awk and the posts it to InfluxDB via curl.
+##This script processes the first line of the file, Formats it with Sed & Awk and the posts it to InfluxDB (database db=ebike) via curl.
 #
 
 while [ 1 -eq 1 ]; do
