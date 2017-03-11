@@ -1,9 +1,10 @@
-# e-picycle
+# e-picycle Ebike Black Box ebbb
 
-Raspberry Pi powered by electric bike battery.  V 0.01
+Raspberry Pi Black Box  V 0.0.1
+
+Grafana exported example of a working install - https://snapshot.raintank.io/dashboard/snapshot/pmG5r8diaoI567h7IozUxB1F2qoeefv1
 
 ##Parts Required:
-
 
 * Raspberry Pi 3 (Raspberry Pi 2 will work however there is no onboard Bluetooth/Wifi)
 * Cycle Analyst
