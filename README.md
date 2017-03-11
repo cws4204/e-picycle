@@ -4,10 +4,24 @@ Raspberry Pi powered by electric bike battery.  V 0.01
 
 ##Parts Required:
 
-* DC-DC Converter eg 36v to 12v or 48v to 12v (depending on battery voltage)
+
 * Raspberry Pi 3 (Raspberry Pi 2 will work however there is no onboard Bluetooth/Wifi)
 * Cycle Analyst
 * Cycle Analyst USB Serial TTY programing cable
+* Power source for Raspberry Pi - DC-DC Converter eg 36v to 12v or 48v to 12v (depending on battery voltage)
+
+##Software to install
+`sudo apt-get install build-essential libi2c-dev i2c-tools python-dev libffi-dev
+sudo pip install smbus-cffi
+sudo pip install git+https://github.com/bivab/smbus-cffi.git
+sudo apt-get install screen
+sudo apt-get install python-dev`
+
+sudo apt-get install python-rpi.gpio
+
+* InfluxDB
+* Grafana
+
 
 * Future features
   * Pi Camera Standard of No-IR for night vision
