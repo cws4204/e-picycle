@@ -1,0 +1,11 @@
+[Unit]
+Description=Launches a script that will pull CA data
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python /home/pi/CAScripts/python_serial.py >/dev/null 2>&1 &
+
+
+[Install]
+WantedBy=multi-user.target
