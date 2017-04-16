@@ -1,0 +1,10 @@
+[Unit]
+Description=Will launch the bash script that imports CA data into database
+
+
+[Service]
+Type=idle
+ExecStart=/home/pi/CAScripts/process.ca.sh
+
+[Install]
+WantedBy=multi-user.target
