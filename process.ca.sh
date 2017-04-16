@@ -6,6 +6,28 @@
 #
 
 while [ 1 -eq 1 ]; do
+        
+        #Checks the size of the receive file to ensure there is data there. Logging to log file
+        FILENAME=/home/pi/blackboxtest/received.txt
+        FILESIZE=$(stat -c%s "$FILENAME")
+        int=0
+        #If there is no data, retry to get data for 5 seconds
+        while [ "$FILESIZE" -eq 0 ]; do
+                echo -e "Data Not Found" >> /home/pi/blackboxtest/Log.txt
+                ((int=int+1))
+                FILESIZE=$(stat -c%s "$FILENAME")
+                                if [ $int -gt 5 ]
+                then
+                        #If there is no data for 5 seconds, restart the service
+                        echo  -e "Trying to restart SerialOutput service" >> /home/pi/blackboxtest/Log.txt
+                        systemctl restart launch_serialoutput.service
+                        int=0
+                        echo  -e "restart SerialOutput service sucessful" >> /home/pi/blackboxtest/Log.txt
+                fi
+                sleep 1
+        done
+         echo -e "Data Found" >> /home/pi/CAScripts/Log.txt
+
         tail -n2 /home/pi/blackboxtest/received.txt | head -n1 | awk '{print "amp_hours,host=ebike value="$1}' | grep -v "amp_hours,host=ebike value=Ah" | curl -i -XPOST 'http://localhost:8086/write?db=ebike' --data-binary @-
         tail -n2 /home/pi/blackboxtest/received.txt | head -n1 | awk '{print "voltage,host=ebike value="$2}' | grep -v "voltage,host=ebike value=V" | curl -i -XPOST 'http://localhost:8086/write?db=ebike' --data-binary @-
         tail -n2 /home/pi/blackboxtest/received.txt | head -n1 | awk '{print "dist,host=ebike value="$5}' | grep -v "=D" | awk -F. '{print $1"."substr($2,1,2)}'| curl -i -XPOST 'http://localhost:8086/write?db=ebike' --data-binary @-
