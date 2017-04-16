@@ -9,7 +9,7 @@ baud  = 9600            # baud rate for serial port
 fname = 'received.txt'   # log file to save data in
 fmode = 'a'             # log file mode = append
 
-with serial.Serial(addr,9600) as pt, open(fname,fmode) as outf:
+with serial.Serial(addr,baud) as pt, open(fname,fmode) as outf:
     spb = io.TextIOWrapper(io.BufferedRWPair(pt,pt,1),
         encoding='ascii', errors='ignore', newline='\r',line_buffering=True)
     spb.readline()  # throw away first line; likely to start mid-sentence (incomplete)
