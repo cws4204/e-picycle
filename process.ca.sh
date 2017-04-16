@@ -33,6 +33,10 @@ while [ 1 -eq 1 ]; do
         tail -n2 /home/pi/blackboxtest/received.txt | head -n1 | awk '{print "dist,host=ebike value="$5}' | grep -v "=D" | awk -F. '{print $1"."substr($2,1,2)}'| curl -i -XPOST 'http://localhost:8086/write?db=ebike' --data-binary @-
         tail -n2 /home/pi/blackboxtest/received.txt | head -n1 | awk '{print "amps,host=ebike value="$3}' | grep -v "amps,host=ebike value=A" | curl -i -XPOST 'http://localhost:8086/write?db=ebike' --data-binary @-
         tail -n2 /home/pi/blackboxtest/received.txt | head -n1 | awk '{print "speed,host=ebike value="$4}' | grep -v "=S" | curl -i -XPOST 'http://localhost:8086/write?db=ebike' --data-binary @-
+        tail -n2 /home/pi/blackboxtest/received.txt | head -n1 | awk '{print "Throttle_in,host=ebike value="$10}' | grep -v "Throttle_in,host=ebike value=ThIn" | curl -i -XPOST 'http://localhost:8086/write?db=ebike' --data-binary @-
+        tail -n2 /home/pi/blackboxtest/received.txt | head -n1 | awk '{print "Throttle_out,host=ebike value="$11}' | grep -v "Throttle_out,host=ebike value=ThOut" | curl -i -XPOST 'http://localhost:8086/write?db=ebike' --data-binary @-
+        tail -n2 /home/pi/blackboxtest/received.txt | head -n1 | awk '{print "Temp,host=ebike value="$6}' | grep -v "Temp,host=ebike value=Celcius" | curl -i -XPOST 'http://localhost:8086/write?db=ebike' --data-binary @-
+
 
 #volts
 VOLTS=`tail -n2 /home/pi/blackboxtest/received.txt | head -n1 | awk '{print $2}'`
@@ -40,6 +44,9 @@ VOLTS=`tail -n2 /home/pi/blackboxtest/received.txt | head -n1 | awk '{print $2}'
 AMPS=`tail -n2 /home/pi/blackboxtest/received.txt | head -n1 | awk '{print $3}'`
 AMPHOUR=`tail -n2 /home/pi/blackboxtest/received.txt | head -n1 | awk '{print $1}'`
 DISTANCE=` tail -n2 /home/pi/blackboxtest/received.txt | head -n1 | awk '{print $5}' | grep -v "=D" | awk -F. '{print $1"."substr($2,1,2)}'`
+THROTTLEIN=`tail -n2 /home/pi/CAScripts/received.txt | head -n1 | awk '{print $10}'`
+THROTTLEOUT=`tail -n2 /home/pi/CAScripts/received.txt | head -n1 | awk '{print $11}'`
+TEMPERATURE=`tail -n2 /home/pi/CAScripts/received.txt | head -n1 | awk '{print $6}'`
 
 
 Watts=`echo $AMPS \* $VOLTS |bc`; echo Watts,host=ebike value=$Watts | curl -i -XPOST 'http://localhost:8086/write?db=ebike' --data-binary @-
